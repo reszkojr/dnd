@@ -189,7 +189,7 @@
     "react-window": "1.8.10",
     "release-it": "17.1.1",
     "require-from-string": "2.0.2",
-    "rimraf": "5.0.5",
+    "rimraf": "6.0.1",
     "rollup": "4.13.0",
     "rollup-plugin-dts": "6.1.0",
     "seedrandom": "3.0.5",
