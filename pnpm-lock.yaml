@@ -32,8 +32,8 @@ devDependencies:
     specifier: 6.7.1
     version: 6.7.1(react@18.2.0)
   '@atlaskit/theme':
-    specifier: 12.6.6
-    version: 12.6.6(react@18.2.0)
+    specifier: 13.0.0
+    version: 13.0.0(react@18.2.0)
   '@babel/core':
     specifier: 7.24.3
     version: 7.24.3
@@ -309,7 +309,7 @@ devDependencies:
     version: 0.5.0
   postcss-styled-syntax:
     specifier: 0.6.4
-    version: 0.6.4(postcss@8.4.35)
+    version: 0.6.4(postcss@8.4.38)
   prettier:
     specifier: 3.2.5
     version: 3.2.5
@@ -436,8 +436,24 @@ packages:
       react: 18.2.0
     dev: true
 
+  /@atlaskit/ds-lib@2.4.0(react@18.2.0):
+    resolution: {integrity: sha512-G2rQEzRcstHhFXaGeIqaavD5FzgCWeRYqo3rmUGJ/Gr0HHHVGZwMU8p2GWs1Tk5VPI/oO86SpJzyXDhxCNaSKw==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@babel/runtime': 7.24.1
+      bind-event-listener: 3.0.0
+      react: 18.2.0
+    dev: true
+
   /@atlaskit/platform-feature-flags@0.2.5:
     resolution: {integrity: sha512-0fD2aDxn2mE59D4acUhVib+YF2HDYuuPH50aYwpQdcV/CsVkAaJsMKy8WhWSulcRFeMYp72kfIfdy0qGdRB7Uw==}
+    dependencies:
+      '@babel/runtime': 7.24.1
+    dev: true
+
+  /@atlaskit/platform-feature-flags@0.3.0:
+    resolution: {integrity: sha512-/0u5fFJ0Rw2j4M5wzsXgaHO6Ey12oekPCDTRvmmAIp4GO9T2Swbl80bavLAPSOmSHMhHTSuvRxiJveZXfQ21IQ==}
     dependencies:
       '@babel/runtime': 7.24.1
     dev: true
@@ -456,6 +472,20 @@ packages:
       - supports-color
     dev: true
 
+  /@atlaskit/theme@13.0.0(react@18.2.0):
+    resolution: {integrity: sha512-tvyFtHrRDvEUvLM8B7f9O6vtqB5Aappev73jsU+Btp5oyDqIh/3SBeDWRR2n/AiROoWqhDBQoesUdNBi0+QB+A==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@atlaskit/codemod-utils': 4.2.3
+      '@atlaskit/ds-lib': 2.4.0(react@18.2.0)
+      '@atlaskit/tokens': 1.58.0(react@18.2.0)
+      '@babel/runtime': 7.24.1
+      react: 18.2.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /@atlaskit/tokens@1.42.1(react@18.2.0):
     resolution: {integrity: sha512-P2JNxcwQGjeYDBF03kkQpJ3UPMIC20VN3VAotMIyPU4M3Z8HVvoBgGoKis3ahG0s3tNnph6R3hsw9snRAyGJsQ==}
     peerDependencies:
@@ -467,6 +497,22 @@ packages:
       '@babel/traverse': 7.24.0
       '@babel/types': 7.24.0
       bind-event-listener: 2.1.1
+      react: 18.2.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /@atlaskit/tokens@1.58.0(react@18.2.0):
+    resolution: {integrity: sha512-bDp5/I2+NMlMPb5EwBvfamBWiHgKWl/Zbo2hocIhGDt7WB0enyeG9/VYd231T+5zMhGX1oQ+BWkAHN+K7aKGgw==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@atlaskit/ds-lib': 2.4.0(react@18.2.0)
+      '@atlaskit/platform-feature-flags': 0.3.0
+      '@babel/runtime': 7.24.1
+      '@babel/traverse': 7.24.1
+      '@babel/types': 7.24.0
+      bind-event-listener: 3.0.0
       react: 18.2.0
     transitivePeerDependencies:
       - supports-color
@@ -6081,6 +6127,10 @@ packages:
 
   /bind-event-listener@2.1.1:
     resolution: {integrity: sha512-O+a5c0D2se/u2VlBJmPRn45IB6R4mYMh1ok3dWxrIZ2pmLqzggBhb875mbq73508ylzofc0+hT9W41x4Y2s8lg==}
+    dev: true
+
+  /bind-event-listener@3.0.0:
+    resolution: {integrity: sha512-PJvH288AWQhKs2v9zyfYdPzlPqf5bXbGMmhmUIY9x4dAUGIWgomO771oBQNwJnMQSnUIXhKu6sgzpBRXTlvb8Q==}
     dev: true
 
   /bl@4.1.0:
@@ -12405,13 +12455,13 @@ packages:
       util-deprecate: 1.0.2
     dev: true
 
-  /postcss-styled-syntax@0.6.4(postcss@8.4.35):
+  /postcss-styled-syntax@0.6.4(postcss@8.4.38):
     resolution: {integrity: sha512-uWiLn+9rKgIghUYmTHvXMR6MnyPULMe9Gv3bV537Fg4FH6CA6cn21WMjKss2Qb98LUhT847tKfnRGG3FhSOgUQ==}
     engines: {node: '>=14.17'}
     peerDependencies:
       postcss: ^8.4.21
     dependencies:
-      postcss: 8.4.35
+      postcss: 8.4.38
       typescript: 5.4.3
     dev: true
 
